@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 import PageNav from './PageNav';
-const { Col, Container, Row } = require('elemental');
+const { Container } = require('elemental');
 
 const App = (props) => {
   return (
@@ -25,7 +25,10 @@ const App = (props) => {
               <img alt="Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
             </a>
           </p>
-          <p>Feito com muito &lt;3, <a href="https://github.com/lpirola/mapa-da-democracia">código-aberto</a> e um monte de gente colaborando junto.</p>
+          <p>Feito com muito &lt;3,
+            <a href="https://github.com/lpirola/mapa-da-democracia">código-aberto</a> e
+            <a href="https://github.com/lpirola/mapa-da-democracia/blob/master/CONTRIBUTING
+              ">um monte de gente</a> colaborando junto.</p>
         </Container>
       </div>
     </div>

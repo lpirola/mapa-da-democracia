@@ -12,11 +12,9 @@ class FuelSavingsPage extends Component {
 
   render() {
     return (
-      <FuelSavingsForm
-        saveFuelSavings={this.props.actions.saveFuelSavings}
-        calculateFuelSavings={this.props.actions.calculateFuelSavings}
-        appState={this.props.appState}
-      />
+      <div>
+        
+      </div>
     );
   }
 }
