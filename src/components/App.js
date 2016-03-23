@@ -26,7 +26,7 @@ const App = (props) => {
             </a>
           </p>
           <p>Feito com muito <Glyph icon="heart" type="danger" />,&nbsp;
-            <a href="https://github.com/lpirola/mapa-da-democracia">código-aberto </a><i className="fa fa-github"></i> e&nbsp;
+            <a href="https://github.com/lpirola/mapa-da-democracia"> software livre </a><i className="fa fa-github"></i> e&nbsp;
             <a href="https://github.com/lpirola/mapa-da-democracia/blob/master/CONTRIBUTORS.md">um monte de gente</a> colaborando junto.</p>
         </Container>
       </div>

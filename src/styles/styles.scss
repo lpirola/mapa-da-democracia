@@ -21,28 +21,47 @@ body {
   margin: 2em 0;
 }
 
+.warning {
+  color: #fa9f47;
+}
+.error {
+  color: #d64242;
+}
+.success {
+  color: #34c240;
+}
+
 .list-parlamentares {
     margin: 1em 0;
+    text-align: center;
+    .Spinner {
+      margin: 5em;
+    }
     .fa {
       margin: .2em;
       font-size: 4em;
       line-height: 1em;
-
-      &.warning {
-        color: #fa9f47;
-      }
-      &.danger {
-        color: #d64242;
-      }
-      &.success {
-        color: #34c240;
-      }
     }
 }
 
+.legenda-infografico {
+  .legenda {
+    font-size: .9em;
+    margin: 0 0 1em 2em;
+  }
+}
+
 .filter-infografico {
-  text-align: center;
+  text-align: right;
   margin: 1em 0 2em 0;
+}
+
+.botoes-compartilhar {
+  margin: 2em 0 0 0;
+  text-align: center;
+  .Button {
+    margin: 0 0 .5em .5em;
+  }
 }
 
 @import "primary-nav";
