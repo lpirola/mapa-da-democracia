@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
-  "version": "1.2.0",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "mapa-da-democracia",
+  "version": "0.1.0",
+  "description": "Veja quem é quem no rito do impeachment",
   "scripts": {
     "prestart": "npm run remove-dist",
     "start": "parallelshell \"npm run lint:tools\" \"npm run test:watch\" \"npm run open:src\"",
@@ -16,11 +16,12 @@
     "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel-core/register --recursive \"./src/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "Cory House",
-  "license": "MIT",
+  "author": "Lucas Pirola<lucaspirola@gmail.com>",
+  "license": "GPL-v3.0.0",
   "dependencies": {
     "connect-history-api-fallback": "1.1.0",
     "elemental": "0.5.13",
+    "isomorphic-fetch": "2.2.1",
     "normalize.css": "4.0.0",
     "object-assign": "4.0.1",
     "react": "0.14.7",
@@ -28,7 +29,8 @@
     "react-dom": "0.14.7",
     "react-redux": "4.4.0",
     "react-router": "2.0.0",
-    "redux": "3.3.1"
+    "redux": "3.3.1",
+    "tabletop": "1.4.3"
   },
   "devDependencies": {
     "babel-cli": "6.5.1",
@@ -82,6 +84,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
+    "url": "https://github.com/lpirola/mapa-da-democracia"
   }
 }

@@ -3,17 +3,25 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/fuelSavingsActions';
 import FuelSavingsForm from '../components/FuelSavingsForm';
+const { Glyph } = require('elemental');
+import Tabletop from 'tabletop';
 
-class FuelSavingsPage extends Component {
+class HomePage extends Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     appState: PropTypes.object.isRequired
   };
 
+  componentWillMount () {
+    Tabletop.init( { key: '1cWg1D5fmG-Y8IFCRm-2CWQt0UZixreH8OS4wu90M_A8',
+                     callback: function(data, tabletop) { console.log(data[0]['Quer impeachment? ']) },
+                     simpleSheet: true } )
+  }
+
   render() {
     return (
       <div>
-        
+        <Glyph icon="person" type="danger" />
       </div>
     );
   }
@@ -34,4 +42,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FuelSavingsPage);
+)(HomePage);
