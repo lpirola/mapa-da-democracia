@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
-const { Col, Container, Row } = require('elemental');
+const { Container } = require('elemental');
 
 const NotFoundPage = () => {
   return (
-    <Container maxWidth={768} className="page-not-found">
+    <Container maxWidth={768} className="Page__not-found">
       <h2>
         404 Página não encontrada
       </h2>
