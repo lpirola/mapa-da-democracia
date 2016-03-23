@@ -21,6 +21,7 @@
   "dependencies": {
     "connect-history-api-fallback": "1.1.0",
     "elemental": "0.5.13",
+    "hint.css": "2.2.0",
     "isomorphic-fetch": "2.2.1",
     "normalize.css": "4.0.0",
     "object-assign": "4.0.1",

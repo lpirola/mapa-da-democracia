@@ -6,15 +6,24 @@ const ParlamentarIcon = (props) => {
     props.onChange(props.name, e.target.value);
   };
 
-  let className = 'fa fa-male success';
+  let className = 'success';
   if (props.data['Quer impeachment? '] === 'Sim') {
-    className = 'fa fa-male danger';
+    className = 'danger';
   } else if (props.data['Quer impeachment? '] === '') {
-    className = 'fa fa-male warning';
+    className = 'warning';
   }
 
+  let hintClassName = 'hint--top hint--rounded hint--bounce hint--' + className;
+  let iconClassName = 'fa fa-male ' + className;
+  let parlamentarSummary = props.data['Nome'] + ' - ' +
+    props.data['Partido'] + ' - ' +
+    props.data['UF']  + ' - Quer impeachment? ' +
+    (props.data['Quer impeachment? '] === '' ? 'Indeciso' : '');
+
   return (
-    <i className={className}></i>
+    <span className={hintClassName} data-hint={parlamentarSummary}>
+      <i className={iconClassName}></i>
+    </span>
 	);
 };
 

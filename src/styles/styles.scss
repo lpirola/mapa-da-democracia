@@ -1,4 +1,5 @@
 @import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/hint.css/src/hint';
 @import 'elemental';
 
 $primary-color: #C04848;
@@ -23,7 +24,7 @@ body {
 .list-parlamentares {
     margin: 1em 0;
     .fa {
-      margin: 0 .4em .4em 0;
+      margin: .2em;
       font-size: 4em;
       line-height: 1em;
 
