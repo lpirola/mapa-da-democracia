@@ -26,8 +26,8 @@ class HomePage extends Component {
     return (
       <Container maxWidth={768} className="Page__home">
         <div className="legenda-infografico">
-          <span className="legenda"><i className="fa fa-circle error"></i> Contra</span>
-          <span className="legenda"><i className="fa fa-circle success"></i> À favor</span>
+          <span className="legenda"><i className="fa fa-circle error"></i> À favor impeachment</span>
+          <span className="legenda"><i className="fa fa-circle success"></i> Contra</span>
           <span className="legenda"><i className="fa fa-circle warning"></i> Indecisos</span>
         </div>
         <div className="list-parlamentares">
