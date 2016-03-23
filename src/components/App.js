@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 import PageNav from './PageNav';
-const { Container } = require('elemental');
+const { Glyph, Container } = require('elemental');
 
 const App = (props) => {
   return (
@@ -20,15 +20,14 @@ const App = (props) => {
       <div className="page-footer">
         <Container maxWidth={768} className="demo-container container">
           <p>
-            Esta obra está licenciada com uma Licença&nbsp;
+            O conteúdo deste website está licenciado sob uma Licença&nbsp;
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
               <img alt="Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
             </a>
           </p>
-          <p>Feito com muito &lt;3,
-            <a href="https://github.com/lpirola/mapa-da-democracia">código-aberto</a> e
-            <a href="https://github.com/lpirola/mapa-da-democracia/blob/master/CONTRIBUTING
-              ">um monte de gente</a> colaborando junto.</p>
+          <p>Feito com muito <Glyph icon="heart" type="danger" />,&nbsp;
+            <a href="https://github.com/lpirola/mapa-da-democracia">código-aberto </a><i className="fa fa-github"></i> e&nbsp;
+            <a href="https://github.com/lpirola/mapa-da-democracia/blob/master/CONTRIBUTORS.md">um monte de gente</a> colaborando junto.</p>
         </Container>
       </div>
     </div>
