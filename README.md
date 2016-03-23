@@ -5,9 +5,10 @@ Veja quem é quem no rito do impeachment.
 
 ## Bibliotecas utilizadas
 
-* http://uigradients.com/#
+* http://uigradients.com/
 * http://kushagragour.in/lab/hint/
 * http://elemental-ui.com/
+* https://github.com/jsoma/tabletop
 * https://github.com/facebook/react/
 * https://github.com/reactjs/redux
 
