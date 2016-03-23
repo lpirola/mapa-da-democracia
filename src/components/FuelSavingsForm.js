@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import FuelSavingsResults from './FuelSavingsResults';
 import FuelSavingsTextInput from './FuelSavingsTextInput';
+const { Col, Container, Row } = require('elemental');
 
 // Destrucuring props for brevity below.
 const FuelSavingsForm = ({saveFuelSavings, calculateFuelSavings, appState}) => {
@@ -13,7 +14,7 @@ const FuelSavingsForm = ({saveFuelSavings, calculateFuelSavings, appState}) => {
   };
 
   return (
-    <div>
+    <Container maxWidth={768} className="fuel-form-container">
       <h2>Fuel Savings Analysis</h2>
       <table>
         <tbody>
@@ -56,7 +57,7 @@ const FuelSavingsForm = ({saveFuelSavings, calculateFuelSavings, appState}) => {
 
       {appState.necessaryDataIsProvidedToCalculateSavings && <FuelSavingsResults savings={appState.savings}/>}
       <input type="submit" value="Save" onClick={() => saveFuelSavings(appState)}/>
-    </div>
+    </Container>
   );
 };
 

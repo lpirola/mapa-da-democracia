@@ -1,0 +1,18 @@
+.page-footer {
+  background-color: rgba(253, 253, 253, 0.95);
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.17);
+  color: #999;
+  padding: 2em 0;
+  text-align: center;
+}
+.page-footer a {
+  color: #31adb8;
+}
+.page-footer a:hover,
+.page-footer a:focus {
+  color: #4dc5cf;
+  outline: none;
+}
+.page-footer__icon {
+  font-size: 1.125em;
+}

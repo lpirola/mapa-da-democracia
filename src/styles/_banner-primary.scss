@@ -1,0 +1,63 @@
+.demo-banner--primary {
+  background-repeat: repeat-x;
+  background: #C04848; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #C04848 , #480048); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #C04848 , #480048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  //margin-top: -50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.demo-banner--primary .demo-container {
+  position: relative;
+}
+.demo-banner--primary .demo-banner__heading-1 {
+  color: white;
+  font-size: 60px;
+  margin: .5em 0;
+}
+.demo-banner--primary .demo-banner__heading-2 {
+  color: white;
+  opacity: .75;
+}
+@media (max-width: 480px) {
+  .demo-banner--primary .demo-banner__heading-1 {
+    font-size: 48px;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+  .demo-banner--primary .demo-banner__heading-2 {
+    font-size: 30px;
+  }
+  .demo-banner--primary .demo-banner__button {
+    display: block;
+    font-size: 16px;
+    line-height: 3;
+    height: auto;
+  }
+}
+.demo-banner-illustration {
+  -webkit-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  animation: fadeIn 2s;
+  height: 180px;
+  width: 180px;
+  //background: url('../images/hero-bg.svg') no-repeat left top;
+  background-size: 180px, 180px;
+  left: -54px;
+  position: absolute;
+  top: -56px;
+}
+@media (min-width: 481px) {
+  .demo-banner-illustration {
+    height: 240px;
+    width: 240px;
+    background-size: 240px, 240px;
+    left: -82px;
+    top: -75px;
+  }
+}

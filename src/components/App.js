@@ -9,12 +9,8 @@ const App = (props) => {
       <header className="demo-banner demo-banner--primary">
         <Container maxWidth={768} className="demo-container">
           <span className="demo-banner-illustration" />
-          <h1 className="demo-banner__heading demo-banner__heading-1">Elemental UI</h1>
-          <h2 className="demo-banner__heading demo-banner__heading-2">A UI Toolkit for React.js Websites and Apps</h2>
-          <div className="demo-banner__buttons">
-            <a className="Button Button--demo-primary" href="https://twitter.com/elementalui" target="_blank">Follow @ElementalUI on Twitter</a>
-            <a className="Button Button--demo-link" href="https://github.com/elementalui/elemental" target="_blank">View the GitHub Project</a>
-          </div>
+          <h1 className="demo-banner__heading demo-banner__heading-1"><Link to="/">Mapa da democracia</Link></h1>
+          <h2 className="demo-banner__heading demo-banner__heading-2">Veja quem é quem no rito do impeachment</h2>
         </Container>
       </header>
       <PageNav />
@@ -22,9 +18,15 @@ const App = (props) => {
         {props.children}
       </div>
       <div className="page-footer">
-        <div className="demo-container container">
-          Copyright &copy; 2016 &middot; (MIT) License &middot; Built by <a href="http://www.thinkmill.com.au" target="_blank">Thinkmill</a>, initially for integration with <a href="http://www.keystonejs.com" target="_blank">KeystoneJS</a>
-        </div>
+        <Container maxWidth={768} className="demo-container container">
+          <p>
+            Esta obra está licenciada com uma Licença&nbsp;
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              <img alt="Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+            </a>
+          </p>
+          <p>Feito com muito &lt;3, <a href="https://github.com/lpirola/mapa-da-democracia">código-aberto</a> e um monte de gente colaborando junto.</p>
+        </Container>
       </div>
     </div>
   );
