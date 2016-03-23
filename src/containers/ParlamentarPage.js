@@ -3,28 +3,31 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
-const { Glyph, Card, Container, Pill } = require('elemental');
+import ParlamentarCard from '../components/ParlamentarCard';
+const { Row, Col, Glyph, Card, Container, Pill } = require('elemental');
 import Tabletop from 'tabletop';
+import slugify from 'slugify';
 
-class HomePage extends Component {
+class ParlamentarPage extends Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
-    appState: PropTypes.object.isRequired
+    appState: PropTypes.object.isRequired,
+    params: PropTypes.object.isRequired
   };
 
   componentWillMount () {
-    Tabletop.init({
-      key: '1cWg1D5fmG-Y8IFCRm-2CWQt0UZixreH8OS4wu90M_A8',
-      orderby: 'querimpeachment',
-      callback: (data, tabletop) => { this.props.actions.saveDeputados(data, tabletop); },
-      simpleSheet: true }
-    );
+    let { name } = this.props.params;
+    this.parlamentarData = this.props.appState.data.length < 1 ? '' : this.props.appState.data.filter((data) => {
+      return (slugify(data['politico_nome']) == name ? data : null);
+    });
+    // console.log(this.parlamentarData);
   }
 
   render() {
     return (
+
       <Container maxWidth={768} className="Page__parlamentar">
-        Página do parlamentar
+        <ParlamentarCard data={this.parlamentarData} />
       </Container>
     );
   }
@@ -45,4 +48,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(HomePage);
+)(ParlamentarPage);

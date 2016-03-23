@@ -41,8 +41,7 @@ class BancadaPage extends Component {
 
         <div className="list-parlamentares">
           {(this.props.appState.data.length < 1 ? <Spinner size="lg" /> : this.props.appState.data.map((data) => {
-            console.log(data);
-            return (data['Quer impeachment? '] === 'Sim' ? <ParlamentarPhoto data={data} /> : '');
+            return (data['politico_impeachment'] === 'FAVOR' ? <ParlamentarPhoto data={data} /> : '');
           }))}
         </div>
 

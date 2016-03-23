@@ -15,8 +15,6 @@ class HomePage extends Component {
   componentWillMount () {
     Tabletop.init({
       key: '1cWg1D5fmG-Y8IFCRm-2CWQt0UZixreH8OS4wu90M_A8',
-      orderby: 'querimpeachment',
-      reverse: true,
       callback: (data, tabletop) => { this.props.actions.saveDeputados(data, tabletop); },
       simpleSheet: true }
     );
@@ -26,13 +24,19 @@ class HomePage extends Component {
     return (
       <Container maxWidth={768} className="Page__home">
         <div className="legenda-infografico">
-          <span className="legenda"><i className="fa fa-circle error"></i> À favor impeachment</span>
+          <span className="legenda"><i className="fa fa-circle error"></i> Pró-impeachment</span>
           <span className="legenda"><i className="fa fa-circle success"></i> Contra</span>
           <span className="legenda"><i className="fa fa-circle warning"></i> Indecisos</span>
         </div>
         <div className="list-parlamentares">
           {(this.props.appState.data.length < 1 ? <Spinner size="lg" /> : this.props.appState.data.map((data) => {
-            return (<ParlamentarIcon data={data} />);
+            return ((data['politico_comissao'] == 'sim' && data['politico_impeachment'] == 'FAVOR') ? <ParlamentarIcon data={data} /> : '');
+          }))}
+          {(this.props.appState.data.length < 1 ? '' : this.props.appState.data.map((data) => {
+            return ((data['politico_comissao'] == 'sim' && data['politico_impeachment'] == 'INDECISO') ? <ParlamentarIcon data={data} /> : '');
+          }))}
+          {(this.props.appState.data.length < 1 ? '' : this.props.appState.data.map((data) => {
+            return ((data['politico_comissao'] == 'sim' && data['politico_impeachment'] == 'CONTRA') ? <ParlamentarIcon data={data} /> : '');
           }))}
         </div>
         <div className="filter-infografico">
@@ -54,7 +58,7 @@ class HomePage extends Component {
               </a>
             </span>
             <span data-hint="Envie uma mensagem" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="javascript:void(0);" className="Button Button--hollow-success">
+              <a href="whatsapp://send?text=Mapa da democracia!" data-action="share/whatsapp/share" className="Button Button--hollow-success">
                 <i className="success fa fa-whatsapp"></i> Whatsapp
               </a>
             </span>
