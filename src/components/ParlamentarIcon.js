@@ -18,7 +18,7 @@ const ParlamentarIcon = (props) => {
   let parlamentarSummary = props.data['Nome'] + ' - ' +
     props.data['Partido'] + ' - ' +
     props.data['UF']  + ' - Quer impeachment? ' +
-    (props.data['Quer impeachment? '] === '' ? 'Indeciso' : '');
+    (props.data['Quer impeachment? '] === '' ? 'Indeciso' : props.data['Quer impeachment? ']);
 
   return (
     <span className={hintClassName} data-hint={parlamentarSummary}>
