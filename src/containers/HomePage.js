@@ -5,30 +5,34 @@ import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
 const { Spinner, ButtonGroup, Button, Glyph, Row, Col, Card, Container, Pill } = require('elemental');
 
+const handleShareFacebook = (e) => {
+  window.FB.ui(
+  {
+    method: 'share',
+    href: 'http://mapadademocracia.org.br/'
+  }, function(response){});
+};
+
 class HomePage extends Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     appState: PropTypes.object.isRequired
   };
 
+
+
   componentWillMount () {
     this.props.actions.loadDeputados(this.props.appState);
   }
-
-  /*<div className="filter-infografico">
-    <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão."><Pill label="Comissão de relatoria" type="primary-inverted" /></span>
-    <Pill label="Todos deputados" type="primary" onClear={this.handleClear} />
-    <Pill label="Todos senadores" type="primary" onClear={this.handleClear} />
-  </div>*/
 
   render() {
     return (
       <Container maxWidth={768} className="Page__home">
           <h2>Não podemos deixar que os deputados aprovem um impeachment ilegal ameaçando o Estado Democrático de Direito. É hora de pressionarmos o Congresso nas ruas e nas redes. Envie agora uma mensagem para os deputados federais.</h2>
         <div className="legenda-infografico">
-          <span className="legenda"><i className="fa fa-circle error"></i> Pró-impeachment</span>
-          <span className="legenda"><i className="fa fa-circle success"></i> Contra</span>
-          <span className="legenda"><i className="fa fa-circle warning"></i> Indecisos</span>
+          <span className="legenda"><i className="fa fa-circle error"></i> Contra democracia</span>
+          <span className="legenda"><i className="fa fa-circle success"></i> À favor</span>
+          <span className="legenda"><i className="fa fa-circle warning"></i> Indeciso</span>
         </div>
         <div className="list-parlamentares">
           {(this.props.appState.data.length < 1 ? <Spinner size="lg" /> : this.props.appState.data.map((data) => {
@@ -55,7 +59,7 @@ class HomePage extends Component {
           <h2>Compartilhe a Democracia:</h2>
           <div className="botoes-compartilhar">
             <span data-hint="Compartilhe" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//mapadademocracia.org.br/" className="Button Button--primary">
+              <a href="#" onClick={handleShareFacebook} className="Button Button--primary">
                 <i className="fa fa-facebook"></i> Facebook
               </a>
             </span>
@@ -65,7 +69,7 @@ class HomePage extends Component {
               </a>
             </span>
             <span data-hint="Envie uma mensagem" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="whatsapp://send?text=Exerça%20a%20Democracia!%20http%3A//mapadademocracia.org.br" className="Button Button--success">
+              <a href="whatsapp://send?text=Vote%20%20Contra%20o%20Impeachmende%20Dilma.%20N%C3%A3o%20h%C3%A1%20nenhuma%20base%20legal%20para%20afast%C3%A1-la.%20http%3A//mapadademocracia.org.br" className="Button Button--success">
                 <i className="fa fa-whatsapp"></i> Whatsapp
               </a>
             </span>
