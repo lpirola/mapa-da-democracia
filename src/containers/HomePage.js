@@ -18,6 +18,9 @@ class HomePage extends Component {
   render() {
     return (
       <Container maxWidth={768} className="Page__home">
+        <Card>
+          <h2>Não podemos deixar que os deputados aprovem um impeachment ilegal ameaçando o Estado Democrático de Direito. É hora de pressionarmos o Congresso nas ruas e nas redes. Envie agora uma mensagem para os deputados federais.</h2>
+        </Card>
         <div className="legenda-infografico">
           <span className="legenda"><i className="fa fa-circle error"></i> Pró-impeachment</span>
           <span className="legenda"><i className="fa fa-circle success"></i> Contra</span>
