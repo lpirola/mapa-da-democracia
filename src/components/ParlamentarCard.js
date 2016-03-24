@@ -6,7 +6,6 @@ const { Button, Alert, Card, Row, Col, Glyph } = require('elemental');
 
 const ParlamentarCard = (props) => {
   let data = props.data[0];
-  console.log(props.data[0]);
 //  console.log(data);
   const handleChange = (e) => {
     props.onChange(props.name, e.target.value);
