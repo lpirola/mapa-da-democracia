@@ -26,9 +26,11 @@ class BancadaPage extends Component {
           <Col>
             <Card>
               <Alert type="danger"><strong>Como assim?</strong></Alert>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+              <p> Esses parlamentares estão dizendo que vão votar a favor da abertura do processo de impeachment. 
 
-</p>
+                 O problema é que esse pedido não tem base legal e vai desrespeitar o voto de 54 milhões de pessoas.
+
+                 O nome disso é GOLPE, e contamos com a sua ajuda para ajudar no convencimento de cada deputado.></p>
             </Card>
           </Col>
         </Row>

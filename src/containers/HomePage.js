@@ -43,7 +43,10 @@ class HomePage extends Component {
           <Pill label="Todos senadores" type="primary" onClear={this.handleClear} />
         </div>
         <Card>
-          <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</h2>
+          <h2>Colabore  com essa campanha, mobilize mais gente. Vamos juntos barrar o Golpe!</h2> 
+          <br/>
+          <br/>
+          <h2>Compartilhe a Democracia:</h2>
           <div className="botoes-compartilhar">
             <span data-hint="Compartilhe" className=" hint--top hint--rounded hint--bounce hint--primary">
               <a href="javascript:void(0);" className="Button Button--primary">
