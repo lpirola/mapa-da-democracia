@@ -2,6 +2,7 @@
 
 Veja quem é quem no rito do impeachment.
 
+Conceito inicial pode ser encontrado [nessa issue.](https://github.com/lpirola/mapa-da-democracia/issues/3).
 
 ## Bibliotecas utilizadas
 
