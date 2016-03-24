@@ -1,1 +1,2 @@
 export const SAVE_DEPUTADOS = 'SAVE_DEPUTADOS';
+export const SAVE_DEPUTADO = 'SAVE_DEPUTADO';

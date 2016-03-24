@@ -1,8 +1,9 @@
-import {SAVE_DEPUTADOS} from '../constants/ActionTypes';
+import {SAVE_DEPUTADOS, SAVE_DEPUTADO} from '../constants/ActionTypes';
 import objectAssign from 'object-assign';
 
 const initialState = {
-  data: []
+  data: [],
+  selectedParlamentar: []
 };
 
 //IMPORTANT: Note that with Redux, state should NEVER be changed.
@@ -16,22 +17,8 @@ export default function fuelSavingsAppState(state = initialState, action) {
       // For this example, just simulating a save by changing date modified.
       // In a real app using Redux, you might use redux-thunk and handle the async call in fuelSavingsActions.js
 			return objectAssign({}, state, { data: action.data });
-
-		//case CALCULATE_FUEL_SAVINGS:
-    // { limit scope with this code block, to satisfy eslint no-case-declarations rule.
-      // let newState = objectAssign({}, state);
-      // newState[action.fieldName] = action.value;
-      // let calc = calculator();
-      // newState.necessaryDataIsProvidedToCalculateSavings = calc.necessaryDataIsProvidedToCalculateSavings(newState);
-      // newState.dateModified = dateHelper.getFormattedDateTime(new Date());
-      //
-      // if (newState.necessaryDataIsProvidedToCalculateSavings) {
-      //   newState.savings = calc.calculateSavings(newState);
-      // }
-
-    //   return newState;
-    // }
-
+    case SAVE_DEPUTADO:
+      return objectAssign({}, state, { selectedParlamentar: action.data });
 		default:
 			return state;
 	}

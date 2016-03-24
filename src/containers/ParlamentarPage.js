@@ -5,8 +5,6 @@ import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
 import ParlamentarCard from '../components/ParlamentarCard';
 const { Row, Spinner, Col, Glyph, Card, Container, Pill } = require('elemental');
-import Tabletop from 'tabletop';
-import slugify from 'slugify';
 
 class ParlamentarPage extends Component {
   static propTypes = {
@@ -18,8 +16,8 @@ class ParlamentarPage extends Component {
   componentWillMount () {
     let { name } = this.props.params;
 
-    this.props.actions.loadDeputados(this.props.appState);
-    //this.props.actions.filterDeputado(name);
+//    this.props.actions.loadDeputados(this.props.appState);
+    this.props.actions.loadDeputado(this.props.appState, name);
 
     // this.parlamentarData = {};
     // if (this.props.appState.data.length > 1) {
@@ -32,7 +30,7 @@ class ParlamentarPage extends Component {
   render() {
     return (
       <Container maxWidth={768} className="Page__parlamentar">
-        {(this.props.appState.data.length < 1 ? <Spinner size="lg" /> : <ParlamentarCard data={this.props.appState.data} />)};
+        {(!this.props.appState.selectedParlamentar.length ? <Spinner size="lg" /> : <ParlamentarCard data={this.props.appState.selectedParlamentar} />)}
       </Container>
     );
   }
