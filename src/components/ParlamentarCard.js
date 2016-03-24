@@ -6,6 +6,7 @@ const { Button, Alert, Card, Row, Col, Glyph } = require('elemental');
 
 const ParlamentarCard = (props) => {
   let data = props.data[0];
+  console.log(props.data[0]);
 //  console.log(data);
   const handleChange = (e) => {
     props.onChange(props.name, e.target.value);
@@ -79,10 +80,10 @@ const ParlamentarCard = (props) => {
 
       <Alert type="error">
         <strong>Instruções:</strong>
-        <p><strong>Por telefone: </strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. </p>
-        <p><strong>Por e-mail: </strong>Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.</p>
-        <p><strong>No facebook: </strong>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.</p>
-        <p><strong>No twitter: </strong>Nullam mollis. Ut justo. Suspendisse potenti.</p>
+        <p><strong>Por telefone: </strong>Ligue para o gabinete, peça para deixar um recado para o(a) parlamentar. Diga que você espera seu voto contrário à tentativa ilegal de impeachment de Dilma. Reforce que há milhares de pessoas acompanhando este processo e contando com o(a) parlamentar.</p>
+        <p><strong>Por e-mail: </strong>Envie um email direto para o(a) parlamentar.</p>
+        <p><strong>No facebook: </strong>faça um post ou um comentário na página do(a) parlamentar. Diga que você espera seu voto contrário à tentativa ilegal de impeachment de Dilma. Reforce que há milhares de pessoas acompanhando este processo e contando com o(a) parlamentar.</p>
+        <p><strong>No twitter: </strong>faça um tweet para o(a) parlamentar. Diga que o impeachment de Dilma é ilegal e que conta com ele(ela) para barrar o golpe. Use a tag #ContraOImpeachment</p>
       </Alert>
     </Card>
   </div>
