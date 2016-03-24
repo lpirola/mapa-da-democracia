@@ -104,13 +104,20 @@ body {
     }
   }
   .profile-summary {
-    margin: 0 0 1em;
+    margin: 0 0 3em;
   }
-  .profile-contacts {
-    margin: 0 0 2em;
-    .Button {
-      margin: 0 .5em 0 0;
-    }
+}
+
+.profile-contacts {
+  margin: 0 0 2em;
+  text-align: center;
+  h2 {
+    display:inline-block;
+    vertical-align: top;
+    margin: 0 1em 0 0;
+  }
+  .Button {
+    margin: 0 .5em 0 0;
   }
 }
 
