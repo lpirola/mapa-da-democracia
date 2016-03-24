@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
 const { Spinner, ButtonGroup, Button, Glyph, Row, Col, Card, Container, Pill } = require('elemental');
-import Tabletop from 'tabletop';
 
 class HomePage extends Component {
   static propTypes = {
@@ -13,11 +12,7 @@ class HomePage extends Component {
   };
 
   componentWillMount () {
-    Tabletop.init({
-      key: '1cWg1D5fmG-Y8IFCRm-2CWQt0UZixreH8OS4wu90M_A8',
-      callback: (data, tabletop) => { this.props.actions.saveDeputados(data, tabletop); },
-      simpleSheet: true }
-    );
+    this.props.actions.loadDeputados(this.props.appState);
   }
 
   render() {
@@ -48,18 +43,18 @@ class HomePage extends Component {
           <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</h2>
           <div className="botoes-compartilhar">
             <span data-hint="Compartilhe" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="javascript:void(0);" className="Button Button--hollow-primary">
-                <i className="primary fa fa-facebook"></i> Facebook
+              <a href="javascript:void(0);" className="Button Button--primary">
+                <i className="fa fa-facebook"></i> Facebook
               </a>
             </span>
             <span data-hint="Tweet" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="javascript:void(0);" className="Button Button--hollow-warning">
-                <i className="warning fa fa-twitter"></i> Twitter
+              <a href="javascript:void(0);" className="Button Button--warning">
+                <i className="fa fa-twitter"></i> Twitter
               </a>
             </span>
             <span data-hint="Envie uma mensagem" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="whatsapp://send?text=Mapa da democracia!" data-action="share/whatsapp/share" className="Button Button--hollow-success">
-                <i className="success fa fa-whatsapp"></i> Whatsapp
+              <a href="whatsapp://send?text=Mapa da democracia!" data-action="share/whatsapp/share" className="Button Button--success">
+                <i className="fa fa-whatsapp"></i> Whatsapp
               </a>
             </span>
           </div>

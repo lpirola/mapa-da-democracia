@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
 import ParlamentarCard from '../components/ParlamentarCard';
-const { Row, Col, Glyph, Card, Container, Pill } = require('elemental');
+const { Row, Spinner, Col, Glyph, Card, Container, Pill } = require('elemental');
 import Tabletop from 'tabletop';
 import slugify from 'slugify';
 
@@ -17,17 +17,22 @@ class ParlamentarPage extends Component {
 
   componentWillMount () {
     let { name } = this.props.params;
-    this.parlamentarData = this.props.appState.data.length < 1 ? '' : this.props.appState.data.filter((data) => {
-      return (slugify(data['politico_nome']) == name ? data : null);
-    });
-    // console.log(this.parlamentarData);
+
+    this.props.actions.loadDeputados(this.props.appState);
+    this.props.actions.filterDeputado(name);
+
+    // this.parlamentarData = {};
+    // if (this.props.appState.data.length > 1) {
+    //   this.parlamentarData = this.props.appState.data.filter((data) => {
+    //     return (slugify(data['politico_nome']) == name ? data : null);
+    //   });
+    // }
   }
 
   render() {
     return (
-
       <Container maxWidth={768} className="Page__parlamentar">
-        <ParlamentarCard data={this.parlamentarData} />
+        {(this.props.appState.data.length < 1 ? <Spinner size="lg" /> : <ParlamentarCard data={this.props.appState.data} />)};
       </Container>
     );
   }

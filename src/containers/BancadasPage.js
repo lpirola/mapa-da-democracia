@@ -13,13 +13,7 @@ class BancadaPage extends Component {
   };
 
   componentWillMount () {
-    Tabletop.init({
-      key: '1cWg1D5fmG-Y8IFCRm-2CWQt0UZixreH8OS4wu90M_A8',
-      orderby: 'querimpeachment',
-      reverse: true,
-      callback: (data, tabletop) => { this.props.actions.saveDeputados(data, tabletop); },
-      simpleSheet: true }
-    );
+    this.props.actions.loadDeputados(this.props.appState);
   }
 
   render() {
