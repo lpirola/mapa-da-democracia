@@ -19,7 +19,7 @@ class ParlamentarPage extends Component {
     let { name } = this.props.params;
 
     this.props.actions.loadDeputados(this.props.appState);
-    this.props.actions.filterDeputado(name);
+    //this.props.actions.filterDeputado(name);
 
     // this.parlamentarData = {};
     // if (this.props.appState.data.length > 1) {
