@@ -47,7 +47,7 @@ const ParlamentarCard = (props) => {
         </div>
         <div className="profile-contacts">
           <h4>Formas de contato:</h4>
-          <a className="Button Button--primary" href={'tel:'+data['politico_phone']}>
+          <a className="Button Button--primary" href={'tel:061'+data['politico_phone']}>
             <span className="">
               <i className="fa fa-phone"></i> Telefone
             </span>
