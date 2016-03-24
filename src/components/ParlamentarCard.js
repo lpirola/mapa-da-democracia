@@ -53,7 +53,7 @@ const ParlamentarCard = (props) => {
             </span>
           </a>
 
-          <a className="Button Button--primary" href={'mailto:'+data.politico_email}>
+          <a className="Button Button--primary" href={'mailto:'+data.politico_email+'?subject=Excelentissimo%20Deputado%20Federal%20'+data.politico_nome+'%20&body=Excelentissimo%20Deputado%20Federal%20'+data.politico_nome+'%20...'}>
             <span className="">
               <i className="fa fa-envelope"></i> E-mail
             </span>
