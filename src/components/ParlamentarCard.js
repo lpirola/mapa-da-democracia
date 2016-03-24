@@ -62,13 +62,13 @@ const ParlamentarCard = (props) => {
           </span>
         </a>
 
-        <a className="Button Button--primary" target="_blank" href={data.politico_facebook}>
+        {data.politico_facebook != '' ? <a className="Button Button--primary" target="_blank" href={data.politico_facebook}>
           <span className="">
             <i className="fa fa-facebook"></i> Facebook
           </span>
-        </a>
+        </a> : ''}
 
-        {data.politico_twitter ? <a className="Button Button--primary" target="_blank" href={data.politico_twitter}>
+        {data.politico_twitter != '' ? <a className="Button Button--primary" target="_blank" href={data.politico_twitter}>
           <span className="">
             <i className="fa fa-twitter"></i> Twitter
           </span>
