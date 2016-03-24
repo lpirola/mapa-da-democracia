@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import {Link} from 'react-router';
 import ParlamentarIcon from './ParlamentarIcon';
-//import DemoBox from './DemoBox';
+import ParlamentarPosicionamento from './ParlamentarPosicionamento';
+
 const { Button, Alert, Card, Row, Col, Glyph } = require('elemental');
 
 const ParlamentarCard = (props) => {
   let data = props.data[0];
-//  console.log(data);
+
   const handleChange = (e) => {
     props.onChange(props.name, e.target.value);
   };
@@ -42,11 +43,11 @@ const ParlamentarCard = (props) => {
       <Col sm="2/3">
         <div className="profile-summary">
           <h1>{data.politico_nome}</h1>
-          <h2>É <span className="featured success">contra</span> a democracia</h2>
+          <ParlamentarPosicionamento data={data} />
         </div>
       </Col>
     </Row>
-    <Card>
+    {data.politico_impeachment !== 'CONTRA' ? <Card>
       <div className="profile-contacts">
         <h2>Pressione: </h2>
         <a className="Button Button--primary" href={'tel:061'+data['politico_phone']}>
@@ -81,7 +82,7 @@ const ParlamentarCard = (props) => {
         <p><strong>No facebook: </strong>faça um post ou um comentário na página do(a) parlamentar. Diga que você espera seu voto contrário à tentativa ilegal de impeachment de Dilma. Reforce que há milhares de pessoas acompanhando este processo e contando com o(a) parlamentar.</p>
         <p><strong>No twitter: </strong>faça um tweet para o(a) parlamentar. Diga que o impeachment de Dilma é ilegal e que conta com ele(ela) para barrar o golpe. Use a tag #ContraOImpeachment</p>
       </Alert>
-    </Card>
+    </Card> : ''}
   </div>
   );
 };

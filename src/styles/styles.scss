@@ -4,6 +4,8 @@
 
 $primary-color: #C04848;
 $error-color: #d64242;
+$success-color: #34c240;
+$warning-color: #fa9f47;
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1em 0;
@@ -17,9 +19,12 @@ h2 {
     padding: .25em;
     font-weight: 800;
     text-transform: uppercase;
-    background-color: $primary-color;
-    &.sucess {
-      background-color: $error-color;
+    background-color: $error-color;
+    &.success {
+      background-color: $success-color;
+    }
+    &.warning {
+      background-color: $warning-color;
     }
   }
 }
