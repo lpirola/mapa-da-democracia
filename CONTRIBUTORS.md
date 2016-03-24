@@ -5,12 +5,13 @@ mapa-da-democracia contribuidores (ordenador alfabeticamente, ou quase :) )
 * Bruno Gonçalves
 * Carla Santos
 * Clara Sanchez
-* Daniel Orofino
+* Daniela Orofino
 * Flávia Azevedo
 * Filipe Peçanha
 * FFS
 * Jef
 * João Paulo Mehl
+* Jacson Passold
 * Mateus
 * Maurílio Átila
 * Minoro
