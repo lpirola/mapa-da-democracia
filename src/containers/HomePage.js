@@ -18,6 +18,9 @@ class HomePage extends Component {
   render() {
     return (
       <Container maxWidth={768} className="Page__home">
+        <Card>
+          <h2>Não podemos deixar que os deputados aprovem um impeachment ilegal ameaçando o Estado Democrático de Direito. É hora de pressionarmos o Congresso nas ruas e nas redes. Envie agora uma mensagem para os deputados federais.</h2>
+        </Card>
         <div className="legenda-infografico">
           <span className="legenda"><i className="fa fa-circle error"></i> Pró-impeachment</span>
           <span className="legenda"><i className="fa fa-circle success"></i> Contra</span>
@@ -40,7 +43,10 @@ class HomePage extends Component {
           <Pill label="Todos senadores" type="primary" onClear={this.handleClear} />
         </div>
         <Card>
-          <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</h2>
+          <h2>Colabore  com essa campanha, mobilize mais gente. Vamos juntos barrar o Golpe!</h2> 
+          <br/>
+          <br/>
+          <h2>Compartilhe a Democracia:</h2>
           <div className="botoes-compartilhar">
             <span data-hint="Compartilhe" className=" hint--top hint--rounded hint--bounce hint--primary">
               <a href="javascript:void(0);" className="Button Button--primary">
