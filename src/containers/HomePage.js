@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
+import ParlamentarList from '../components/ParlamentarList';
+
 const { Spinner, ButtonGroup, Button, Glyph, Row, Col, Card, Container, Pill } = require('elemental');
 
 const handleShareFacebook = (e) => {
@@ -34,17 +36,8 @@ class HomePage extends Component {
           <span className="legenda"><i className="fa fa-circle success"></i> À favor</span>
           <span className="legenda"><i className="fa fa-circle warning"></i> Indeciso</span>
         </div>
-        <div className="list-parlamentares">
-          {(this.props.appState.data.length < 1 ? <Spinner size="lg" /> : this.props.appState.data.map((data) => {
-            return ((data['politico_comissao'] == 'sim' && data['politico_impeachment'] == 'FAVOR') ? <ParlamentarIcon data={data} /> : '');
-          }))}
-          {(this.props.appState.data.length < 1 ? '' : this.props.appState.data.map((data) => {
-            return ((data['politico_comissao'] == 'sim' && data['politico_impeachment'] == 'INDECISO') ? <ParlamentarIcon data={data} /> : '');
-          }))}
-          {(this.props.appState.data.length < 1 ? '' : this.props.appState.data.map((data) => {
-            return ((data['politico_comissao'] == 'sim' && data['politico_impeachment'] == 'CONTRA') ? <ParlamentarIcon data={data} /> : '');
-          }))}
-        </div>
+
+        <ParlamentarList data={this.props.appState.data} />
 
         <div className="filter-infografico">
           <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão."><Pill label="Comissão de relatoria" type="primary-inverted" /></span>
