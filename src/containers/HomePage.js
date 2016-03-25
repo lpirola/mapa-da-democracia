@@ -38,6 +38,7 @@ class HomePage extends Component {
   render() {
     return (
       <Container maxWidth={768} className="Page__home">
+        <h2>Comissão de impeachment</h2>
         <Row>
           <Col sm="1/2" className="legenda-infografico">
             <span className="legenda"><i className="fa fa-circle error"></i> Contra democracia</span>

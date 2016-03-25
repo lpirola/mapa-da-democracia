@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
@@ -30,6 +31,7 @@ class ParlamentarPage extends Component {
   render() {
     return (
       <Container maxWidth={768} className="Page__parlamentar">
+        <Link to="/parlamentares">Voltar</Link>
         {(!this.props.appState.selectedParlamentar.length ? <Spinner size="lg" /> : <ParlamentarCard data={this.props.appState.selectedParlamentar} />)}
       </Container>
     );
