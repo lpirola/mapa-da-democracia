@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import ParlamentarIcon from './ParlamentarIcon';
 import ParlamentarPosicionamento from './ParlamentarPosicionamento';
 
-const { Button, Alert, Card, Row, Col, Glyph } = require('elemental');
+const { Button, Alert, Card, Row, Col } = require('elemental');
 
 const ParlamentarCard = (props) => {
   let data = props.data[0];

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
 import ParlamentarPhoto from '../components/ParlamentarPhoto';
-const { Alert, Spinner, ButtonGroup, Button, Glyph, Row, Col, Card, Container, Pill } = require('elemental');
+const { Alert, Spinner, ButtonGroup, Button, Row, Col, Card, Container, Pill } = require('elemental');
 import Tabletop from 'tabletop';
 
 class BancadaPage extends Component {
@@ -26,7 +26,7 @@ class BancadaPage extends Component {
           <Col>
             <Card>
               <Alert type="danger"><strong>Como assim?</strong></Alert>
-              <p> Esses parlamentares estão dizendo que vão votar a favor da abertura do processo de impeachment. 
+              <p> Esses parlamentares estão dizendo que vão votar a favor da abertura do processo de impeachment.
 
                  O problema é que esse pedido não tem base legal e vai desrespeitar o voto de 54 milhões de pessoas.
 

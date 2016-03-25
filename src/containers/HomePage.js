@@ -4,8 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
 import ParlamentarList from '../components/ParlamentarList';
-
-const { Spinner, ButtonGroup, Button, Glyph, Row, Col, Card, Container, Pill } = require('elemental');
+import { Spinner, ButtonGroup, Button, Row, Col, Card, Container, Pill } from 'elemental';
 
 const handleShareFacebook = (e) => {
   window.FB.ui(
@@ -15,35 +14,46 @@ const handleShareFacebook = (e) => {
   }, function(response){});
 };
 
+
 class HomePage extends Component {
   static propTypes = {
     actions: PropTypes.object.isRequired,
     appState: PropTypes.object.isRequired
   };
 
-
-
   componentWillMount () {
     this.props.actions.loadDeputados(this.props.appState);
+  }
+
+  handleComissaoParlamentares (filter) {
+    let filterComissao = true;
+    if (filter === 'showAll') {
+
+      filterComissao = false;
+    }
+
+    this.props.actions.filterDeputados(this.props.appState.data, filterComissao);
   }
 
   render() {
     return (
       <Container maxWidth={768} className="Page__home">
-          <h2>Não podemos deixar que os deputados aprovem um impeachment ilegal ameaçando o Estado Democrático de Direito. É hora de pressionarmos o Congresso nas ruas e nas redes. Envie agora uma mensagem para os deputados federais.</h2>
+        <h2>Não podemos deixar que os deputados aprovem um impeachment ilegal ameaçando o Estado Democrático de Direito. É hora de pressionarmos o Congresso nas ruas e nas redes. Envie agora uma mensagem para os deputados federais.</h2>
+
         <div className="legenda-infografico">
           <span className="legenda"><i className="fa fa-circle error"></i> Contra democracia</span>
           <span className="legenda"><i className="fa fa-circle success"></i> À favor</span>
           <span className="legenda"><i className="fa fa-circle warning"></i> Indeciso</span>
         </div>
 
-        <ParlamentarList data={this.props.appState.data} />
 
         <div className="filter-infografico">
-          <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão."><Pill label="Comissão de relatoria" type="primary-inverted" /></span>
-          <Pill label="Todos deputados" type="primary" onClear={this.handleClear} />
-          <Pill label="Todos senadores" type="primary" onClear={this.handleClear} />
+          <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão."><Pill label="Comissão de relatoria" type="primary-inverted" onClick={this.handleComissaoParlamentares.bind(this, 'showComissao')}  /></span>
+          <Pill label="Todos deputados" type="primary"  onClick={this.handleComissaoParlamentares.bind(this, 'showAll')} />
         </div>
+
+        <ParlamentarList data={this.props.appState.filteredParlamentar} />
+
 
         <Card>
           <h2>Colabore  com essa campanha, mobilize mais gente. Vamos juntos barrar o Golpe!</h2>

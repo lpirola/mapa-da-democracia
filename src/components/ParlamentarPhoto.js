@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import {Link} from 'react-router';
 import slugify from 'slugify';
 
-const { Glyph } = require('elemental');
-
 const ParlamentarPhoto = (props) => {
   const handleChange = (e) => {
     props.onChange(props.name, e.target.value);

@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import slugify from 'slugify';
 import ParlamentarIcon from './ParlamentarIcon';
 
-const { Spinner, Glyph } = require('elemental');
+const { Spinner } = require('elemental');
 
 const ParlamentarList = (props) => {
   let labelActive = labelActive = (<h2>É <span className="featured success">PRÓ</span> DEMOCRACIA</h2>);

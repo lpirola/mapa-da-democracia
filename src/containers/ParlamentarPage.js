@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../actions/parlamentarActions';
 import ParlamentarIcon from '../components/ParlamentarIcon';
 import ParlamentarCard from '../components/ParlamentarCard';
-const { Row, Spinner, Col, Glyph, Card, Container, Pill } = require('elemental');
+const { Row, Spinner, Col, Card, Container, Pill } = require('elemental');
 
 class ParlamentarPage extends Component {
   static propTypes = {

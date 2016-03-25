@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import {Link} from 'react-router';
 import slugify from 'slugify';
 
-const { Glyph } = require('elemental');
-
 const ParlamentarPosicionamento = (props) => {
   let labelActive = labelActive = (<h2>É <span className="featured success">PRÓ</span> DEMOCRACIA</h2>);
 
