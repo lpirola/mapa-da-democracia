@@ -32,7 +32,7 @@ class HomePage extends Component {
       filterComissao = false;
     }
 
-    this.props.actions.filterDeputados(this.props.appState.data, filterComissao);
+    this.props.actions.comissaoDeputados(this.props.appState.data, filterComissao);
   }
 
   render() {
@@ -48,8 +48,10 @@ class HomePage extends Component {
 
 
           <Col sm="1/2" className="filter-infografico">
-            <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão."><Pill label="Comissão de relatoria" type="primary-inverted" onClick={this.handleComissaoParlamentares.bind(this, 'showComissao')}  /></span>
-            <Pill label="Todos deputados" type="primary"  onClick={this.handleComissaoParlamentares.bind(this, 'showAll')} />
+            <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão.">
+              <Pill label="Mostrar todos" type="primary-inverted" onClick={this.handleComissaoParlamentares.bind(this, 'showAll')}  />
+
+              </span>
           </Col>
         </Row>
 

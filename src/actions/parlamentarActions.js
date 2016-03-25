@@ -10,8 +10,8 @@ function saveDeputado(data) {
 	return { type: types.SAVE_DEPUTADO, data };
 }
 
-function comissaoDeputados(data) {
-	return { type: types.FILTER_COMISSAO_PARLAMENTAR, data };
+export function comissaoDeputados(data, showComissao) {
+	return { type: types.FILTER_COMISSAO_PARLAMENTAR, data, showComissao };
 }
 
 function orderDeputados(data) {
@@ -29,6 +29,7 @@ export function loadDeputados(state={}, name='') {
 						dispatch(loadDeputado({data}, name));
 					}
 					dispatch(orderDeputados(data));
+					dispatch(comissaoDeputados(data, true));
 				},
 				simpleSheet: true
 			});
@@ -49,21 +50,5 @@ export function loadDeputado(state={}, name) {
 			});
 			dispatch(saveDeputado(selectedParlamentar));
 		}
-	};
-}
-
-export function filterDeputados(data, showComissao=true) {
-	return (dispatch) => {
-		let filtered = data;
-
-		if (showComissao) {
-			filtered = filtered.filter((v) => {
-        if (v.politico_comissao === 'sim') {
-          return v;
-        }
-      });
-		}
-
-		dispatch(comissaoDeputados(filtered));
 	};
 }

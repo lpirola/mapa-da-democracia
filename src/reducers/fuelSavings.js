@@ -16,15 +16,25 @@ const initialState = {
 export default function fuelSavingsAppState(state = initialState, action) {
   switch (action.type) {
     case SAVE_DEPUTADOS:
-      // For this example, just simulating a save by changing date modified.
-      // In a real app using Redux, you might use redux-thunk and handle the async call in fuelSavingsActions.js
-      return objectAssign({}, state, { data: action.data });
+    // For this example, just simulating a save by changing date modified.
+    // In a real app using Redux, you might use redux-thunk and handle the async call in fuelSavingsActions.js
+    return objectAssign({}, state, { data: action.data });
     case SAVE_DEPUTADO:
 
-      return objectAssign({}, state, { selectedParlamentar: action.data });
+    return objectAssign({}, state, { selectedParlamentar: action.data });
     case FILTER_COMISSAO_PARLAMENTAR:
+    {
+      let filtered = state.data;
 
-      return objectAssign({}, state, { filteredParlamentar: action.data });
+      if (action.showComissao) {
+        filtered = filtered.filter((v) => {
+          if (v.politico_comissao === 'sim') {
+            return v;
+          }
+        });
+      }
+      return objectAssign({}, state, { filteredParlamentar: filtered });
+    }
     case ORDER_PARLAMENTARES:
     {
       let badDeputados = action.data.filter((data) => {
@@ -41,6 +51,6 @@ export default function fuelSavingsAppState(state = initialState, action) {
     }
     case SHOW_TODOS_PARLAMENTARES:
     default:
-      return state;
+    return state;
   }
 }
