@@ -39,18 +39,19 @@ class HomePage extends Component {
     return (
       <Container maxWidth={768} className="Page__home">
         <h2>Não podemos deixar que os deputados aprovem um impeachment ilegal ameaçando o Estado Democrático de Direito. É hora de pressionarmos o Congresso nas ruas e nas redes. Envie agora uma mensagem para os deputados federais.</h2>
+        <Row>
+          <Col sm="1/2" className="legenda-infografico">
+            <span className="legenda"><i className="fa fa-circle error"></i> Contra democracia</span>
+            <span className="legenda"><i className="fa fa-circle success"></i> À favor</span>
+            <span className="legenda"><i className="fa fa-circle warning"></i> Indeciso</span>
+          </Col>
 
-        <div className="legenda-infografico">
-          <span className="legenda"><i className="fa fa-circle error"></i> Contra democracia</span>
-          <span className="legenda"><i className="fa fa-circle success"></i> À favor</span>
-          <span className="legenda"><i className="fa fa-circle warning"></i> Indeciso</span>
-        </div>
 
-
-        <div className="filter-infografico">
-          <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão."><Pill label="Comissão de relatoria" type="primary-inverted" onClick={this.handleComissaoParlamentares.bind(this, 'showComissao')}  /></span>
-          <Pill label="Todos deputados" type="primary"  onClick={this.handleComissaoParlamentares.bind(this, 'showAll')} />
-        </div>
+          <Col sm="1/2" className="filter-infografico">
+            <span className="hint--top hint--rounded hint--bounce hint--primary" data-hint="Texto introdutório sobre a comissão."><Pill label="Comissão de relatoria" type="primary-inverted" onClick={this.handleComissaoParlamentares.bind(this, 'showComissao')}  /></span>
+            <Pill label="Todos deputados" type="primary"  onClick={this.handleComissaoParlamentares.bind(this, 'showAll')} />
+          </Col>
+        </Row>
 
         <ParlamentarList data={this.props.appState.filteredParlamentar} />
 
