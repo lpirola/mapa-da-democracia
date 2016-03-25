@@ -9,7 +9,7 @@ const handleShareFacebook = (e) => {
   window.FB.ui(
   {
     method: 'share',
-    href: 'http://mapadademocracia.org.br/'
+    href: window.location.href
   }, function(response){});
 };
 

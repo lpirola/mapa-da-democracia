@@ -1,11 +1,12 @@
 .demo-banner--primary {
-  background-repeat: repeat-x;
-  background: #C04848; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #C04848 , #480048); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #C04848 , #480048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background-repeat: repeat-x;
+  // background: #C04848; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to left, #C04848 , #480048); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to left, #C04848 , #480048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: 50% 50% url(../assets/images/bg-topo.png) transparent no-repeat;
+  background-size: cover;
   //margin-top: -50px;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding: 4em 0;
   text-align: center;
   a {
     color: white;
@@ -16,13 +17,16 @@
   position: relative;
 }
 .demo-banner--primary .demo-banner__heading-1 {
+  display: none;
   color: white;
-  font-size: 60px;
-  margin: .5em 0;
+  width: 16em;
+  height: 6em;
+  margin: 0;
 }
 .demo-banner--primary .demo-banner__heading-2 {
   color: white;
   opacity: .75;
+  display: none;
 }
 @media (max-width: 480px) {
   .demo-banner--primary .demo-banner__heading-1 {
@@ -44,20 +48,19 @@
   -webkit-animation: fadeIn 2s;
   -o-animation: fadeIn 2s;
   animation: fadeIn 2s;
-  height: 180px;
-  width: 180px;
-  //background: url('../images/hero-bg.svg') no-repeat left top;
-  background-size: 180px, 180px;
-  left: -54px;
-  position: absolute;
-  top: -56px;
+  height: 17em;
+  //width: 50em;
+  background: 50% 0 url(../assets/images/logo.png) transparent no-repeat;
+  background-size: 80%;
+  display: block;
+  margin: 0 auto;
 }
-@media (min-width: 481px) {
-  .demo-banner-illustration {
-    height: 240px;
-    width: 240px;
-    background-size: 240px, 240px;
-    left: -82px;
-    top: -75px;
-  }
-}
+// @media (min-width: 481px) {
+//   .demo-banner-illustration {
+//     height: 240px;
+//     width: 240px;
+//     background-size: 240px, 240px;
+//     left: -82px;
+//     top: -75px;
+//   }
+// }
