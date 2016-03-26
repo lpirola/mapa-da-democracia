@@ -60,26 +60,6 @@ class HomePage extends Component {
 
         <Card>
           <h2>Colabore  com essa campanha, mobilize mais gente. Vamos juntos barrar o Golpe!</h2>
-          <br/>
-          <br/>
-          <h2>Compartilhe a Democracia:</h2>
-          <div className="botoes-compartilhar">
-            <span data-hint="Compartilhe" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="#" onClick={handleShareFacebook} className="Button Button--primary">
-                <i className="fa fa-facebook"></i> Facebook
-              </a>
-            </span>
-            <span data-hint="Tweet" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="https://twitter.com/intent/tweet?text=Vote%20%20Contra%20o%20Impeachmende%20Dilma.%20N%C3%A3o%20h%C3%A1%20nenhuma%20base%20legal%20para%20afast%C3%A1-la.&hashtags=ContraOImpeachment,GolpeNuncaMais&url=http%3A//mapadademocracia.org.br/" className="Button Button--warning">
-                <i className="fa fa-twitter"></i> Twitter
-              </a>
-            </span>
-            <span data-hint="Envie uma mensagem" className=" hint--top hint--rounded hint--bounce hint--primary">
-              <a href="whatsapp://send?text=Vote%20%20Contra%20o%20Impeachmende%20Dilma.%20N%C3%A3o%20h%C3%A1%20nenhuma%20base%20legal%20para%20afast%C3%A1-la.%20http%3A//mapadademocracia.org.br" className="Button Button--success">
-                <i className="fa fa-whatsapp"></i> Whatsapp
-              </a>
-            </span>
-          </div>
         </Card>
       </Container>
     );
