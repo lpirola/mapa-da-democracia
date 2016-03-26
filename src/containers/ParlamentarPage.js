@@ -23,7 +23,7 @@ class ParlamentarPage extends Component {
     // this.parlamentarData = {};
     // if (this.props.appState.data.length > 1) {
     //   this.parlamentarData = this.props.appState.data.filter((data) => {
-    //     return (slugify(data['politico_nome']) == name ? data : null);
+    //     return (slugify(data['title']) == name ? data : null);
     //   });
     // }
   }

@@ -22,16 +22,16 @@ export function loadDeputados(state={}, name='') {
 	return (dispatch) => {
 		if (state.data) {
 			Tabletop.init({
-				key: '1cWg1D5fmG-Y8IFCRm-2CWQt0UZixreH8OS4wu90M_A8',
+				key: '1H_cnrYN6GjkTNynyL4PpJLMdIP-kaLrrOdtyukrwcAs',
 				callback: (data, tabletop) => {
+					data = data['Todos os Deputados'].elements;
 					dispatch(saveDeputados(data));
 					if (name !== '') {
 						dispatch(loadDeputado({data}, name));
 					}
 					dispatch(orderDeputados(data));
 					dispatch(comissaoDeputados(data, true));
-				},
-				simpleSheet: true
+				}
 			});
 		} else {
 			dispatch(saveDeputados(state.data));
@@ -46,7 +46,7 @@ export function loadDeputado(state={}, name) {
 		} else if (state.data.length > 1) {
 			let selectedParlamentar = [];
 			selectedParlamentar = state.data.filter((data) => {
-				return (slugify(data['politico_nome']) == name ? data : null);
+				return (slugify(data['title']) == name ? data : null);
 			});
 			dispatch(saveDeputado(selectedParlamentar));
 		}

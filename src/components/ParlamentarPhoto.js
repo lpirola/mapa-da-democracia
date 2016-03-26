@@ -16,11 +16,11 @@ const ParlamentarPhoto = (props) => {
 
   let hintClassName = 'hint--top hint--rounded hint--bounce hint--' + colorName;
   let iconClassName = 'fa fa-male ' + colorName;
-  let parlamentarSummary = props.data['politico_nome'] + ' - ' +
+  let parlamentarSummary = props.data['title'] + ' - ' +
     props.data['politico_partido'] + '/' +
     props.data['politico_estado']  + ' - Quer impeachment? ' +
     props.data['politico_impeachment'];
-  let parlamentarUrl = '/parlamentares/' + slugify(props.data['politico_nome']);
+  let parlamentarUrl = '/parlamentares/' + slugify(props.data['title']);
 
   return (
     <Link to={parlamentarUrl} className={'image '+hintClassName} data-hint={parlamentarSummary}>
